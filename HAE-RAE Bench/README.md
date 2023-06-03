@@ -67,7 +67,7 @@ Following table is an overview of the HAE-RAE benchmark.
 For any inquiry regarding evaluation, dataset, or etc please contact us at our email addresses: [spthsrbwls123@yonsei.ac.kr](spthsrbwls123@yonsei.ac.kr)
 
 ## Acknowledgement
-This project is sponsored by OnelineAI(https://www.onelineai.com/)
+This project was made possible thanks to OnelineAI(https://www.onelineai.com/).
 
 ## Contributors 
 [Guijin Son](https://github.com/guijinSON), [Hanwool Lee](https://github.com/h-albert-lee), suwan kim, Huiseo Kim, Jae cheol Lee, Je Won Yeom, Jihyu Jung, Jung woo Kim and Songseong Kim
