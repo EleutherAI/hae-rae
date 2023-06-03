@@ -58,7 +58,7 @@ Following table is an overview of the HAE-RAE benchmark.
 | KoAlpaca-Polyglot-12.8B (w/o template) | 67.5 | 63.2      | 61.4   | 44.3                  | 80.3    | 30.0              | **57.8 (63.3)**   | 
  
   
-  - kullm-v2 (w template) 버전에는 [prompt_no_input](https://github.com/nlpai-lab/KULLM/blob/master/templates/kullm.json) 을 사용하였습니다.
+  - We used the template from [prompt_no_input](https://github.com/nlpai-lab/KULLM/blob/master/templates/kullm.json) for kullm-v2 (w template). 
 
 </div>
 </details>
