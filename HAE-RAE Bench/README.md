@@ -83,7 +83,7 @@ If you find our work useful, please consider citing:
     year = {2023},
     publisher = {GitHub},
     journal = {GitHub repository}
-    howpublished = {\url{https://github.com/EleutherAI/hae-rae/HAE-RAE%20Bench}},
+    howpublished = {\url{https://github.com/EleutherAI/hae-rae/tree/main/HAE-RAE%20Bench}},
 }
 ```
 
