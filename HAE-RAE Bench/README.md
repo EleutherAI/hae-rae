@@ -63,8 +63,10 @@ Following table is an overview of the HAE-RAE benchmark.
 </div>
 </details>
 
-## Contact
-For any inquiry regarding evaluation, dataset, or etc please contact us at our email addresses: [spthsrbwls123@yonsei.ac.kr](spthsrbwls123@yonsei.ac.kr)
+## How to Use
+
+If you are interested in accessing, using this dataset for your research, or being included in the HAE-RAE BENCH leaderboard, please reach out to us.
+You can contact us via email at [spthsrbwls123@yonsei.ac.kr](mailto:spthsrbwls123@yonsei.ac.kr).
 
 ## Acknowledgement
 This project was made possible thanks to OnelineAI(https://www.onelineai.com/).
