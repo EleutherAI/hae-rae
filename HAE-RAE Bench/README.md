@@ -69,12 +69,27 @@ For any inquiry regarding evaluation, dataset, or etc please contact us at our e
 ## Acknowledgement
 This project was made possible thanks to OnelineAI(https://www.onelineai.com/).
 
-## Contributors 
-[Guijin Son](https://github.com/guijinSON), [Hanwool Lee](https://github.com/h-albert-lee), suwan kim, Huiseo Kim, Jae cheol Lee, Je Won Yeom, Jihyu Jung, Jung woo Kim and Songseong Kim
+## Citation and Related Information
+### BibTeX entry
 
-## References
-  
-```bibtex
+If you find our work useful, please consider citing:
+
+```bibtext
+@misc{haeraebench,
+    author = {Son, Guijin and Lee, Hanwool and Kim, Suwan and Kim, Huiseo and Lee, Jae Cheol and Yeom, Je Won and Jung, Jihyu and Kim, Jung Woo and Kim, Songseong},
+    title = {HAE-RAE Bench: Evaluation of Korean Knowledge in Language Models},
+    year = {2023},
+    publisher = {GitHub},
+    journal = {GitHub repository}
+    howpublished = {\url{https://github.com/EleutherAI/hae-rae/HAE-RAE%20Bench}},
+}
+```
+
+<details>
+<summary><strong> References </strong></summary>
+<div markdown="1">
+
+ ```bibtex
 @misc{polyglot-ko,
   title = {{Polyglot-Ko: Open-Source Korean Autoregressive Language Model}},
   author = {Ko, Hyunwoong and Yang, Kichang and Ryu, Minho and Choi, Taekyoon and Yang, Seungmu and Hyun, jiwung and Park, Sungho},
@@ -105,6 +120,105 @@ This project was made possible thanks to OnelineAI(https://www.onelineai.com/).
   howpublished = {\url{https://github.com/nlpai-lab/kullm}},
 }
 ```
+ 
+```bibtex
+ @article{lin2021few,
+  title={Few-shot learning with multilingual language models},
+  author={Lin, Xi Victoria and Mihaylov, Todor and Artetxe, Mikel and Wang, Tianlu and Chen, Shuohui and Simig, Daniel and Ott, Myle and Goyal, Naman and Bhosale, Shruti and Du, Jingfei and others},
+  journal={arXiv preprint arXiv:2112.10668},
+  year={2021}
+}
+ ```
+ 
+ ```bibtex
+ @inproceedings{kim-etal-2021-changes,
+    title = "What Changes Can Large-scale Language Models Bring? Intensive Study on {H}yper{CLOVA}: Billions-scale {K}orean Generative Pretrained Transformers",
+    author = "Kim, Boseop  and
+      Kim, HyoungSeok  and
+      Lee, Sang-Woo  and
+      Lee, Gichang  and
+      Kwak, Donghyun  and
+      Dong Hyeon, Jeon  and
+      Park, Sunghyun  and
+      Kim, Sungju  and
+      Kim, Seonhoon  and
+      Seo, Dongpil  and
+      Lee, Heungsub  and
+      Jeong, Minyoung  and
+      Lee, Sungjae  and
+      Kim, Minsub  and
+      Ko, Suk Hyun  and
+      Kim, Seokhun  and
+      Park, Taeyong  and
+      Kim, Jinuk  and
+      Kang, Soyoung  and
+      Ryu, Na-Hyeon  and
+      Yoo, Kang Min  and
+      Chang, Minsuk  and
+      Suh, Soobin  and
+      In, Sookyo  and
+      Park, Jinseong  and
+      Kim, Kyungduk  and
+      Kim, Hiun  and
+      Jeong, Jisu  and
+      Yeo, Yong Goo  and
+      Ham, Donghoon  and
+      Park, Dongju  and
+      Lee, Min Young  and
+      Kang, Jaewook  and
+      Kang, Inho  and
+      Ha, Jung-Woo  and
+      Park, Woomyoung  and
+      Sung, Nako",
+    booktitle = "Proceedings of the 2021 Conference on Empirical Methods in Natural Language Processing",
+    month = nov,
+    year = "2021",
+    address = "Online and Punta Cana, Dominican Republic",
+    publisher = "Association for Computational Linguistics",
+    url = "https://aclanthology.org/2021.emnlp-main.274",
+    doi = "10.18653/v1/2021.emnlp-main.274",
+    pages = "3405--3424",
+ ```
+ 
+ ```bibtex
+ @inproceedings{xue-etal-2021-mt5,
+    title = "m{T}5: A Massively Multilingual Pre-trained Text-to-Text Transformer",
+    author = "Xue, Linting  and
+      Constant, Noah  and
+      Roberts, Adam  and
+      Kale, Mihir  and
+      Al-Rfou, Rami  and
+      Siddhant, Aditya  and
+      Barua, Aditya  and
+      Raffel, Colin",
+    booktitle = "Proceedings of the 2021 Conference of the North American Chapter of the Association for Computational Linguistics: Human Language Technologies",
+    month = jun,
+    year = "2021",
+    address = "Online",
+    publisher = "Association for Computational Linguistics",
+    url = "https://aclanthology.org/2021.naacl-main.41",
+    doi = "10.18653/v1/2021.naacl-main.41",
+    pages = "483--498",
+}
+ ```
+
+ ```bibtex
+ @article{ouyang2022training,
+  title={Training language models to follow instructions with human feedback},
+  author={Ouyang, Long and Wu, Jeffrey and Jiang, Xu and Almeida, Diogo and Wainwright, Carroll and Mishkin, Pamela and Zhang, Chong and Agarwal, Sandhini and Slama, Katarina and Ray, Alex and others},
+  journal={Advances in Neural Information Processing Systems},
+  volume={35},
+  pages={27730--27744},
+  year={2022}
+}
+ ```
+ </div>
+</details>
+ 
+
+
+  
+
 
 
 
