@@ -69,16 +69,8 @@ For any inquiry regarding evaluation, dataset, or etc please contact us at our e
 ## Acknowledgement
 This project is sponsored by OnelineAI(https://www.onelineai.com/)
 
-## Contributors (가나다순)
-김송성 (Benchmark Team 팀원)  
-김수완 (Benchmark Team 팀원)  
-김정우 (Benchmark Team 팀원)  
-김휘서 (Baseline Team 팀원)  
-손규진 (Benchmark Team 팀장)  
-염제원 (Baseline Team 팀원)  
-이재철 (Benchmark Team 팀원)  
-이한울 (Baseline Team 팀장)  
-정지휴 (Benchmark Team 팀원) 
+## Contributors 
+[Guijin Son](https://github.com/guijinSON), [Hanwool Lee](https://github.com/h-albert-lee), suwan kim, Huiseo Kim, Jae cheol Lee, Je Won Yeom, Jihyu Jung, Jung woo Kim and Songseong Kim
 
 ## References
   
