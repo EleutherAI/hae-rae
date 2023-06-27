@@ -6,6 +6,15 @@ The HAE-RAE project is developing a dataset for the Korean language model to enh
 
 The Ko-SAT dataset team aims to evaluate the language model's Korean language proficiency by creating a dataset of the Korean SAT subject, similar to the English SAT and LSAT datasets. The Korean SAT subject consists of four main areas: reading, literature, rhetoric and composition, and language and media, evaluating literary interpretation and utilization, aesthetic and creative abilities in literary works, communication and writing skills, and Korean norms and media utilization skills.
 
+### Dataset
+
+We collected data from the KSAT (수능) administered from 2007 to 2022. 
+For the exams administered between 2007 and 2011, which followed the 7th national curriculum, we collected data from the 2007 to 2011 exams.   
+For the exams administered between 2012 and 2016, which followed the 2007 revised curriculum, we collected data from the 2012 to 2016 exams.   
+For the exams administered between 2017 and 2020, which followed the 2009 revised curriculum, we collected data from the 2017 to 2020 exams.   
+For the exams administered between 2021 and 2023, which followed the 2015 revised curriculum, we collected data from the 2021 to 2023 exams.
+We selected the most difficult exam for each curriculum to ensure the same train/test distribution (i.e., the exam with the highest standardized score) as the test set.  
+
 ### Details
 
 For Korean language problems, expressions referring to a part of the text are frequently used, and problems interpreting tables and graphs frequently appear. The dataset has undergone several processing steps to ensure that the language model can understand them.
@@ -33,10 +42,6 @@ Add <etc start><etc end> to indicate figures, tables, and graphs.
 <etc end>
 
 ```
-
-### Dataset
-
-We collected data from the KSAT (수능) administered from 2007 to 2022. For the exams administered between 2007 and 2011, which followed the 7th national curriculum, we collected data from the 2007 to 2011 exams. For the exams administered between 2012 and 2016, which followed the 2007 revised curriculum, we collected data from the 2012 to 2016 exams. For the exams administered between 2017 and 2020, which followed the 2009 revised curriculum, we collected data from the 2017 to 2020 exams. For the exams administered between 2021 and 2023, which followed the 2015 revised curriculum, we collected data from the 2021 to 2023 exams to ensure the same train/test distribution. We selected the most difficult exam for each curriculum (i.e., the exam with the highest standardized score) as the test set.
 
 ### Benchmark Method
 
