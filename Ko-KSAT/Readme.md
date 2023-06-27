@@ -78,5 +78,15 @@ The evaluation method for Polyglot-Ko, KoAlpaca, Kullm, XGLM, KoGPT, and mT5 is 
 | mt5-large | 0.21 |
 | mt5-xl | 0.20 |
 
+### Contributors 
+나건주  
+박수빈  
+박은우  
+손규진  
+염제원  
+유수빈  
+조하늘  
+진혜원  
+
 ### Copyright
 The copyright of this material belongs to the Korea Institute for Curriculum and Evaluation and is prohibited from using it for research purposes.
