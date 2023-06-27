@@ -17,7 +17,7 @@ Add <etc start><etc end> to indicate figures, tables, and graphs.
 2. Middle Korean cannot be encoded, so it is excluded.
 3. Problems related to tables, graphs, and figures are changed to LaTeX syntax or texts containing only objective facts. For example, the expression in the example below is changed as follows:
 
-![Ko-SAT%20Dataset%206dc3d813a3644c649a55ecc83d497ce0/Untitled.png](Ko-SAT%20Dataset%206dc3d813a3644c649a55ecc83d497ce0/Untitled.png)
+![Untitled](https://github.com/keonju2/keonju2.github.io/assets/54880474/044ba752-59fe-43e7-b635-f59a2c1e23ea)
 
 ```
 <part start> (가) 설문 조사(청소년 대상)
