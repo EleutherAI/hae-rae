@@ -8,11 +8,11 @@ The Ko-SAT dataset team aims to evaluate the language model's Korean language pr
 
 ### Dataset
 
-We collected data from the KSAT (수능) administered from 2007 to 2022. 
+We collected data from the KSAT (수능) administered from 2007 to 2022.   
 For the exams administered between 2007 and 2011, which followed the 7th national curriculum, we collected data from the 2007 to 2011 exams.   
-For the exams administered between 2012 and 2016, which followed the 2007 revised curriculum, we collected data from the 2012 to 2016 exams.   
-For the exams administered between 2017 and 2020, which followed the 2009 revised curriculum, we collected data from the 2017 to 2020 exams.   
-For the exams administered between 2021 and 2023, which followed the 2015 revised curriculum, we collected data from the 2021 to 2023 exams.
+For the exams administered between 2012 and 2016, which followed the 2007 revised curriculum, we collected data from the 2012 to 2016 exams.     
+For the exams administered between 2017 and 2020, which followed the 2009 revised curriculum, we collected data from the 2017 to 2020 exams.     
+For the exams administered between 2021 and 2023, which followed the 2015 revised curriculum, we collected data from the 2021 to 2023 exams.  
 We selected the most difficult exam for each curriculum to ensure the same train/test distribution (i.e., the exam with the highest standardized score) as the test set.  
 
 ### Details
