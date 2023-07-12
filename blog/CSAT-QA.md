@@ -43,11 +43,11 @@ instruction = f"""다음을 읽고 정답으로 알맞은 것을 고르시요. [
 (3) 
 (4) 
 (5) 
-### Answer: 주어진 문제의 정답은[****The correct answer to the given question is****]"""
+### Answer: 주어진 문제의 정답은[The correct answer to the given question is]"""
 ```
 It should be noted that the text within the square brackets was not incorporated in the actual prompt. Rather, it has been provided here as a translation to facilitate better comprehension.
 
-The evaluation results are as following.
+The evaluation results are as follows.
 
 | Model         | Total Correct Answers | Accuracy (%) |
 |---------------|-----------------------|--------------|
