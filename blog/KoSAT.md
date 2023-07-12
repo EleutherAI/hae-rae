@@ -1,88 +1,51 @@
-# How Far Can LLMs Reach in Korean Language Understanding?
+# CSAT-QA: How Far Can LLMs Reach in Korean Language Understanding?
 
 ### Introduction
 
-The HAE-RAE project is developing a dataset for the Korean language model to enhance Polyglot-Ko inference and instruction-following. We are conducting research beyond translation of existing English datasets to create a specialized educational and benchmark dataset representing Korean culture and knowledge.
+In this blog post, we release CSAT-QA, a multiple choice question answering dataset for the Korean Language. The dataset collected questions from the College Scholastic Ability Test (CSAT), also known as the 대학수학능력시험 in South Korea, a standardized test required for university admissions in the country. In this project, we have gathered and made available 936 question and answer pairs from CSAT exams held between 2007 and 2022. These resources are now open-source for public use.
 
-The Ko-SAT dataset team aims to evaluate the language model's Korean language proficiency by creating a dataset of the Korean SAT subject, similar to the English SAT and LSAT datasets. The Korean SAT subject consists of four main areas: reading, literature, rhetoric and composition, and language and media, evaluating literary interpretation and utilization, aesthetic and creative abilities in literary works, communication and writing skills, and Korean norms and media utilization skills.
+### Dataset Collection
 
-### Dataset
+The CSAT-QA dataset, encompasses four distinct curriculums: the 7th National Curriculum, the 2007 Revised Curriculum, the 2009 Revised Curriculum, and the 2015 Revised Curriculum. For the collected dataset we implement the following preprocessing steps:
 
-We collected data from the KSAT (수능) administered from 2007 to 2022.   
-For the exams administered between 2007 and 2011, which followed the 7th national curriculum, we collected data from the 2007 to 2011 exams.   
-For the exams administered between 2012 and 2016, which followed the 2007 revised curriculum, we collected data from the 2012 to 2016 exams.     
-For the exams administered between 2017 and 2020, which followed the 2009 revised curriculum, we collected data from the 2017 to 2020 exams.     
-For the exams administered between 2021 and 2023, which followed the 2015 revised curriculum, we collected data from the 2021 to 2023 exams.  
-We selected the most difficult exam for each curriculum to ensure the same train/test distribution (i.e., the exam with the highest standardized score) as the test set.  
+Initially, due to the unreliability of publicly accessible Korean OCR systems, we opted to manually transcribe the CSAT test questions to ensure accuracy and precision in our dataset.
 
-### Details
+Second, we excluded questions related "Middle Korean," an ancient form of the language. This was necessary as the majority of language models cannot encode such vocabulary.
 
-For Korean language problems, expressions referring to a part of the text are frequently used, and problems interpreting tables and graphs frequently appear. The dataset has undergone several processing steps to ensure that the language model can understand them.
+In the subsequent phase, we manually converted all tables and graphs into a LaTeX format, while translating images into descriptive, alternative texts. This strategy was designed to render complex information more digestible and language model-friendly.
 
-1. Add tokens <part start><part end> to indicate paragraphs in the problem, such as (a), (b), and (c).
-Add tokens <word start><word end> for underlined words or characters (ㄱ), (ㄴ), and (ㄷ).
-Add <part start><part end> for parts that are larger than words but smaller than paragraphs.
-Add <etc start><etc end> to indicate figures, tables, and graphs.
-2. Middle Korean cannot be encoded, so it is excluded.
-3. Problems related to tables, graphs, and figures are changed to LaTeX syntax or texts containing only objective facts. For example, the expression in the example below is changed as follows:
+Finally, we introduce four unique token pairs: <word> <word/>, <sent> <sent/>, <par> <par/>, and <etc> <etc/>. These tokens were incorporated to guide language models in comprehending questions that reference specific parts of the provided context, normally conveyed through italics or bold fonts.
+
+### Dataset Analysis.
+
+CSAT serves as a comprehensive assessment tool for evaluating various aspects of Korean proficiency, encompassing vocabulary, reading comprehension, literature, conversational situations, and more. As a result, the length of each sample in the dataset vary. 
+
+In the subsequent analysis, we applied tokenizers provided by Polyglot and GPT-4 to measure the length of these samples and count the number of tokens each one contains. The results show that the average lengths of tokens for each category are as follows:
+
+- The total_length, which implements a simple len() function in python, averages approximately 1895.31 tokens.
+- The total_length_polyglot, tokenized using the Polyglot tokenizer, averages approximately 1084.72 tokens.
+- The total_length_gpt4, tokenized using the GPT-4 tokenizer , averages approximately 1855.63 tokens.
+
+Interestingly, it was found that on average, the total_length_gpt4 is approximately 1.71 times longer than total_length_polyglot. This suggest that the GPT-4 tokenizer is not as efficient in processing Korean language text compared to Polyglot, highlighting the need of native LLMs for optimized inference.
 
 ![Untitled](https://github.com/keonju2/keonju2.github.io/assets/54880474/044ba752-59fe-43e7-b635-f59a2c1e23ea)
 
+### Evaluation:
+
+IIn this blog post, we narrow our focus and conduct an evaluation on a specific subset of 188 questions selected based on the availability of students' response accuracy. For the purpose of this evaluation, we've employed two cutting-edge language models: GPT-4 and GPT-3.5-Turbo-16K. The following prompt was used for evaluation:
 ```
-<part start> (가) 설문 조사(청소년 대상)
-1. UCC 제작 경험
-<etc start>
-\\begin{table}[]
-\\begin{tabular}{ll}
-제작 경험 & 응답(\\%) \\\\
-있음    & 28     \\\\
-없음    & 72
-\\end{tabular}
-\\end{table}
-<etc end>
-
+instruction = f"""다음을 읽고 정답으로 알맞은 것을 고르시요. [Please read the following passage and choose the correct answer.]
+### Question: 
+### Context: 
+### Options:
+(1) 
+(2) 
+(3) 
+(4) 
+(5) 
+### Answer: 주어진 문제의 정답은[****The correct answer to the given question is****]"""
 ```
-
-### Benchmark Method
-
-For Bard, GPT-turbo 3.5, and HyperClova LK-D2, the prompts used are as follows.
-
-```
-다음 질문을 읽고 아래 선택지 중 가장 적절한 답의 번호를 고르시오.
-### 문제: {문제 내용}
-### 참고: {문학 작품 등 보기 내용}
-### 선택지: {1~5번의 선택지 내용}
-### 정답:
-
-```
-
-The evaluation method for Polyglot-Ko, KoAlpaca, Kullm, XGLM, KoGPT, and mT5 is likelihood. After evaluating the probability of question-answer pairs for each option, the option with the highest log likelihood is presented as the answer. However, problems with token length exceeding 2048 are excluded.
-
-### Result
-
-| Model | Accuracy |
-| --- | --- |
-| GPT-turbo 3.5 | 0.31 |
-| Bard | 0.36 |
-| HyperClova LK-D2 | 0.18 |
-
-| Model | Accuracy |
-| --- | --- |
-| polyglot-ko-1.3b | 0.19 |
-| polyglot-ko-3.8b | 0.18 |
-| polyglot-ko-5.8b | 0.20 |
-| polyglot-ko-12.8b | 0.18 |
-| polyglot-5.8B-CoT | 0.19 |
-| KoAlpaca-Polyglot-12.8B | 0.14 |
-| kullm-polyglot-12.8b-v2 | 0.18 |
-| kogpt6B-ryan1.5b | 0.21 |
-| xglm-1.7B | 0.20 |
-| xglm-2.9B | 0.20 |
-| xglm-7.5B | 0.21 |
-| mt5-base | 0.17 |
-| mt5-large | 0.21 |
-| mt5-xl | 0.20 |
-
+It should be noted that the text within the square brackets was not incorporated in the actual prompt. Rather, it has been provided here as a translation to facilitate better comprehension.
 ### Contributors 
 나건주  
 박수빈  
