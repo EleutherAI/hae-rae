@@ -1,4 +1,4 @@
-# What will be the Korean KSAT proficiency of the LLM model?
+# How Far Can LLMs Reach in Korean Language Understanding?
 
 ### Introduction
 
