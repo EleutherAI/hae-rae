@@ -2,7 +2,7 @@
 
 ### Introduction
 
-In this blog post, we release CSAT-QA, a multiple choice question answering dataset for the Korean Language. The dataset collected questions from the College Scholastic Ability Test (CSAT), also known as the 대학수학능력시험 in South Korea, a standardized test required for university admissions in the country. In this project, we have gathered and made available 936 question and answer pairs from CSAT exams held between 2007 and 2022. These resources are now open-source for public use.
+In this blog post, we release CSAT-QA, a multiple choice question answering dataset for the Korean Language. The dataset collected questions from the College Scholastic Ability Test (CSAT), also known as the 대학수학능력시험 in South Korea, a standardized test required for university admissions in the country. In this project, we have gathered and made available 936 question-and-answer pairs from CSAT exams held between 2007 and 2022. These resources are now open-source for public use.
 
 ### Dataset Collection
 
@@ -28,7 +28,7 @@ In the subsequent analysis, we applied tokenizers provided by Polyglot and GPT-4
 
 Interestingly, it was found that on average, the total_length_gpt4 is approximately 1.71 times longer than total_length_polyglot. This suggest that the GPT-4 tokenizer is not as efficient in processing Korean language text compared to Polyglot, highlighting the need of native LLMs for optimized inference.
 
-![Untitled](https://github.com/keonju2/keonju2.github.io/assets/54880474/044ba752-59fe-43e7-b635-f59a2c1e23ea)
+![Untitled](https://github.com/guijinSON/hae-rae/blob/main/blog/assets/csat_token.png)
 
 ### Evaluation:
 
@@ -46,6 +46,15 @@ instruction = f"""다음을 읽고 정답으로 알맞은 것을 고르시요. [
 ### Answer: 주어진 문제의 정답은[****The correct answer to the given question is****]"""
 ```
 It should be noted that the text within the square brackets was not incorporated in the actual prompt. Rather, it has been provided here as a translation to facilitate better comprehension.
+
+The evaluation results are as following.
+
+| Model         | Total Correct Answers | Accuracy (%) |
+|---------------|-----------------------|--------------|
+| GPT-3.5-16k   | 55                    | 29.26        |
+| GPT-4         | 111                   | 59.04        |
+| Average Human | N/A                   | 46.97        |
+
 ### Contributors 
 나건주  
 박수빈  
