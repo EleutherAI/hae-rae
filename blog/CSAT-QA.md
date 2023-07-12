@@ -14,7 +14,7 @@ Second, we excluded questions related "Middle Korean," an ancient form of the la
 
 In the subsequent phase, we manually converted all tables and graphs into a LaTeX format, while translating images into descriptive, alternative texts. This strategy was designed to render complex information more digestible and language model-friendly.
 
-Finally, we introduce four unique token pairs: <word> <word/>, <sent> <sent/>, <par> <par/>, and <etc> <etc/>. These tokens were incorporated to guide language models in comprehending questions that reference specific parts of the provided context, normally conveyed through italics or bold fonts.
+Finally, we introduce four unique token pairs: \<word> \<word/>, \<sent> \<sent/>, \<par> \<par/>, and \<etc> \<etc/>. These tokens were incorporated to guide language models in comprehending questions that reference specific parts of the provided context, normally conveyed through italics or bold fonts.
 
 ### Dataset Analysis.
 
