@@ -34,7 +34,7 @@ In this blog post, we narrow our focus and conduct an evaluation on a specific s
 
 Rather than a conventional approach of balanced sampling, we have filtered process based on the availability of the response accuracy. As a result, the distribution of questions within our subset is imbalanced, as shown in the following figure.
 
-![Untitled](https://github.com/guijinSON/hae-rae/blob/main/blog/assets/csat_token.png)
+![Untitled](https://github.com/guijinSON/hae-rae/blob/main/blog/assets/csat_histogram.png)
 
 ### Evaluation:
 
@@ -74,9 +74,9 @@ Our analysis reveals an intriguing disparity between Language Models (LMs) and h
 
 The model GPT-4 also significantly outperforms all other models under consideration, including the earlier iterations like GPT-3.5-16k and Polyglot-12.8B. This substantial leap in performance is aligned with expectations, given the much larger size of GPT-4, indicating the potential benefits of scaling up these models.
 
-While GPT-4 surpasses the average human performance score, it's worth noting that humans still display greater versatility, performing better across a wider array of categories. This suggests that while GPT-4 excels in some areas, humans maintain a more balanced performance profile.
-
 Lastly, the underperformance of Polyglot-12.8B deserves a mention. Its scores fall below the baseline expected for random guessing (20%), indicating significant limitations in this model's capabilities.
+
+![Untitled](https://github.com/guijinSON/hae-rae/blob/main/blog/assets/csat_spyder.png)
 
 ### Contributors 
 나건주  
@@ -88,5 +88,3 @@ Lastly, the underperformance of Polyglot-12.8B deserves a mention. Its scores fa
 조하늘  
 진혜원  
 
-### Copyright
-The copyright of this material belongs to the Korea Institute for Curriculum and Evaluation and is prohibited from using it for research purposes.
