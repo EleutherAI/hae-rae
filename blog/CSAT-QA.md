@@ -41,7 +41,7 @@ Rather than a conventional approach of balanced sampling, we have filtered proce
 In this blog post, we narrow our focus and conduct an evaluation on a specific subset of 188 questions selected based on the availability of students' response accuracy. We have put to test two proprietary language models, GPT-4 and GPT-3.5-Turbo-16K, and one open-source language model, Polyglot-12.8B.
 
 For GPT-4 and GPT-3.5-Turbo-16K, we used the following instruction with the model's temperature fixed at 0.01 to prompt the language model to generate the most probable answer. 
-
+```
 instruction = f"""다음을 읽고 정답으로 알맞은 것을 고르시요. [Please read the following passage and choose the correct answer.]
 ### Question: 
 ### Context: 
@@ -52,7 +52,7 @@ instruction = f"""다음을 읽고 정답으로 알맞은 것을 고르시요. [
 (4) 
 (5) 
 ### Answer: 주어진 문제의 정답은[****The correct answer to the given question is****]"""
-
+```
 It should be noted that the text within the square brackets was not included in the actual prompt. Rather, it has been provided here as a translation for international researchers.
 
 For Polyglot-12.8B, we employed the LM-Eval-Harness framework for evaluation. Although all the evaluations were conducted in a zero-shot setting, the methodology used for GPT-4 and GPT-3.5-Turbo-16K is more challenging compared to the one used for Polyglot-12.8B. Consequently, direct comparisons between models using these distinct evaluation methods can potentially lead to misleading interpretations.
