@@ -89,7 +89,7 @@ You can download the datasets using the following code.
 
 ```
 from datasets import load_dataset
-dataset = load_dataset("HAERAE-HUB/CSAT-QA")
+dataset = load_dataset("EleutherAI/CSAT-QA")
 ```
 </details>
 
@@ -100,7 +100,7 @@ dataset = load_dataset("HAERAE-HUB/CSAT-QA")
 from datasets import load_dataset
 import pandas as pd
 
-dataset = load_dataset("HAERAE-HUB/CSAT-QA")
+dataset = load_dataset("EleutherAI/CSAT-QA")
 dataset = pd.DataFrame(dataset["train"]).dropna(subset=["Category"])
 ```
 </details>
