@@ -8,11 +8,11 @@ In this blog post, we release CSAT-QA, a multiple choice question answering data
 
 The CSAT-QA dataset, encompasses four distinct curriculums: the 7th National Curriculum, the 2007 Revised Curriculum, the 2009 Revised Curriculum, and the 2015 Revised Curriculum. For the collected dataset we implement the following preprocessing steps:
 
-Initially, due to the unreliability of publicly accessible Korean OCR systems, we opted to manually transcribe the CSAT test questions to ensure accuracy and precision in our dataset.
+Initially, due to the unreliability of publicly accessible Korean OCR systems, we opted to manually transcribe the CSAT test questions to ensure the quality of out dataset.
 
-Second, we excluded questions related "Middle Korean," an ancient form of the language. This was necessary as the majority of language models cannot encode such vocabulary.
+Second, we excluded questions related to "Middle Korean," an ancient form of the language. This was necessary as the majority of language models cannot encode such vocabulary.
 
-In the subsequent phase, we manually converted all tables and graphs into a LaTeX format, while translating images into descriptive, alternative texts. This strategy was designed to render complex information more digestible and language model-friendly.
+In the subsequent phase, we manually converted all tables and graphs into a LaTeX format, while translating images into descriptive, alternative texts. This is done to fully represent complex questions in a language model-friendly manner.
 
 Finally, we introduce four unique token pairs: \<word> \<word/>, \<sent> \<sent/>, \<par> \<par/>, and \<etc> \<etc/>. These tokens were incorporated to guide language models in comprehending questions that reference specific parts of the provided context, normally conveyed through italics or bold fonts.
 
