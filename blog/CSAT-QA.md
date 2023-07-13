@@ -24,7 +24,7 @@ In the subsequent analysis, we applied tokenizers provided by Polyglot and GPT-4
 
 - The total_length, which implements a simple len() function in python, averages approximately 1895.31 tokens.
 - The total_length_polyglot, tokenized using the Polyglot tokenizer, averages approximately 1084.72 tokens.
-- The total_length_gpt4, tokenized using the GPT-4 tokenizer , averages approximately 1855.63 tokens.
+- The total_length_gpt4, tokenized using the GPT-4 tokenizer, averages approximately 1855.63 tokens.
 
 Interestingly, it was found that on average, the total_length_gpt4 is approximately 1.71 times longer than total_length_polyglot. This suggests that the GPT-4 tokenizer is not as efficient in processing Korean language text compared to Polyglot, highlighting the need for native LLMs for optimized inference.
 
@@ -32,13 +32,13 @@ Interestingly, it was found that on average, the total_length_gpt4 is approximat
 
 In this blog post, we narrow our focus and conduct an evaluation on a specific subset of 188 questions selected based on the availability of students' response accuracy. The subset comprises six distinct categories, namely Writing (WR), Grammar (GR), Reading Comprehension: Science (RCS), Reading Comprehension: Social Science (RCSS), Reading Comprehension: Humanities (RCH), and Literature (LI).
 
-Rather than a conventional approach of balanced sampling, we have filtered process based on the availability of the response accuracy. As a result, the distribution of questions within our subset is imbalanced, as shown in the following figure.
+Rather than a conventional approach of balanced sampling, we have filtered based on the availability of the response accuracy. As a result, the distribution of questions within our subset is imbalanced, as shown in the following figure.
 
 ![Untitled](https://github.com/guijinSON/hae-rae/blob/main/blog/assets/csat_histogram.png)
 
 ### Evaluation:
 
-In this blog post, we narrow our focus and conduct an evaluation on a specific subset of 188 questions selected based on the availability of students' response accuracy. We have put to test two proprietary language models, GPT-4 and GPT-3.5-Turbo-16K, and one open-source language model, Polyglot-12.8B.
+For evaluation, we compare two proprietary language models, GPT-4 and GPT-3.5-Turbo-16K, and one open-source language model, [Polyglot-12.8B](https://huggingface.co/EleutherAI/polyglot-ko-12.8b).
 
 For GPT-4 and GPT-3.5-Turbo-16K, we used the following instruction with the model's temperature fixed at 0.01 to prompt the language model to generate the most probable answer. 
 ```
@@ -55,7 +55,7 @@ instruction = f"""다음을 읽고 정답으로 알맞은 것을 고르시요. [
 ```
 It should be noted that the text within the square brackets was not included in the actual prompt. Rather, it has been provided here as a translation for international researchers.
 
-For Polyglot-12.8B, we employed the LM-Eval-Harness framework for evaluation. Although all the evaluations were conducted in a zero-shot setting, the methodology used for GPT-4 and GPT-3.5-Turbo-16K is more challenging compared to the one used for Polyglot-12.8B. Consequently, direct comparisons between models using these distinct evaluation methods can potentially lead to misleading interpretations.
+For Polyglot-12.8B, we employed the [LM-Eval-Harness framework](https://github.com/EleutherAI/lm-evaluation-harness) for evaluation. Although all the evaluations were conducted in a zero-shot setting, the methodology used for GPT-4 and GPT-3.5-Turbo-16K is more challenging compared to the one used for Polyglot-12.8B. Consequently, direct comparisons between models using these distinct evaluation methods can potentially lead to misleading interpretations.
 
 The evaluation results are as follows. 
 
