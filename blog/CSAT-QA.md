@@ -77,7 +77,7 @@ Moreover, though the addition of unique tokens change the performance of the mod
 
 Lastly, the underperformance of Polyglot-Ko-12.8B is noteworthy. Its scores were below random guessing (20%), indicating limitations in the model's capabilities.
 
-![Untitled](https://github.com/guijinSON/hae-rae/blob/main/blog/assets/csat_spyder.png =100x20)
+<img src="https://github.com/guijinSON/hae-rae/blob/main/blog/assets/csat_spyder.png" width="200" height="200" />
 
 ### Release Notes
 
