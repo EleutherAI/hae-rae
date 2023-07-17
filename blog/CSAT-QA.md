@@ -73,11 +73,11 @@ Our analysis shows an intriguing disparity between Language Models (LMs) and hum
 
 The GPT-4 also significantly outperformed GPT-3.5-16k and Polyglot-12.8B. This substantial leap in performance is aligned with expectations, given the much larger size of GPT-4, indicating the potential benefits of scaling up these models.
 
-Moreover, though the addition of unique tokens change the performance of the model we do not observe any significant tendancies in our experiments.
+Moreover, though the addition of unique tokens changes the performance of the model we do not observe any significant tendencies in our experiments.
 
 Lastly, the underperformance of Polyglot-Ko-12.8B is noteworthy. Its scores were below random guessing (20%), indicating limitations in the model's capabilities.
 
-<img src="https://github.com/guijinSON/hae-rae/blob/main/blog/assets/csat_spyder.png" width="200" height="200" />
+<img src="https://github.com/guijinSON/hae-rae/blob/main/blog/assets/csat_spyder.png" width="700" height="700" />
 
 ### Release Notes
 
