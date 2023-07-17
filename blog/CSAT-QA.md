@@ -76,9 +76,9 @@ The GPT-4 also significantly outperformed GPT-3.5-16k and Polyglot-12.8B. This s
 Moreover, though the addition of unique tokens changes the performance of the model we do not observe any significant tendencies in our experiments.
 
 Lastly, the underperformance of Polyglot-Ko-12.8B is noteworthy. Its scores were below random guessing (20%), indicating limitations in the model's capabilities.
-
-<img src="https://github.com/guijinSON/hae-rae/blob/main/blog/assets/csat_spyder.png" width="600" height="600" />
-
+<p align="center">
+    <img src="https://github.com/guijinSON/hae-rae/blob/main/blog/assets/csat_spyder.png" width="600" height="600" />
+</p>
 ### Release Notes
 
 We are happy to release two versions of the dataset: CSAT-QA(FULL) and CSAT-QA(EVAL). CSAT-QA(EVAL) includes the specific 188 questions that were utilized for our evaluation, whereas CSAT-QA(FULL) includes all 936 questions contained in the complete dataset.
