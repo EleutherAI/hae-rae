@@ -14,7 +14,7 @@ Second, we excluded questions related to "Middle Korean," an ancient form of the
 
 In the subsequent phase, we manually converted all tables and graphs into the LaTeX format, while translating images into descriptive, alternative texts. This is done to fully represent complex questions in a language model-friendly manner.
 
-Finally, we introduced four unique token pairs: \<word> \<word/>, \<sent> \<sent/>, \<par> \<par/>, and \<etc> \<etc/>. These tokens were incorporated to guide language models in comprehending questions that reference specific parts of the provided context, normally conveyed through italics or bold fonts.
+Finally, we introduced four unique token pairs: \<word> \<word/>, \<sent> \<sent/>, \<par> \<par/>, and \<etc> \<etc/>. These tokens were incorporated to guide language models in comprehending questions that reference specific parts of the provided context, normally conveyed through italics or bold fonts. For evaluation, we provide both versions with and without the introduced unique tokens.
 
 ### Dataset Analysis.
 
@@ -43,8 +43,8 @@ For evaluation, we compared two proprietary language models, GPT-4 and GPT-3.5-T
 For GPT-4 and GPT-3.5-Turbo-16K, we used the following instruction with the model's temperature fixed at 0.01 to prompt the language model to generate the most probable answer. 
 ```
 instruction = f"""다음을 읽고 정답으로 알맞은 것을 고르시요. [Please read the following passage and choose the correct answer.]
-### Question: 
 ### Context: 
+### Question: 
 ### Options:
 (1) 
 (2) 
@@ -59,20 +59,21 @@ For Polyglot-Ko-12.8B, we employed the [LM-Eval-Harness](https://github.com/Eleu
 
 The evaluation results are as follows. 
 
-| Category | Polyglot-Ko-12.8B | GPT-3.5-16k | GPT-4     | Human_Performance |
-|----------|----------------|-------------|-----------|-------------------|
-| WR       | 0.09           | 9.09        | 45.45     | **54.0**          |
-| GR       | 0.00           | 20.00       | 32.00     | **45.41**         |
-| LI       | 21.62          | 35.14       | **59.46** | 54.38             |
-| RCH      | 17.14          | 37.14       | **62.86** | 48.7              |
-| RCS      | 10.81          | 27.03       | **64.86** | 39.93             |
-| RCSS     | 11.9           | 30.95       | **71.43** | 44.54             |
-| Average  | 10.26          | 26.56       | **56.01** | 47.8              |
+|     **Models**    |   **GR**  |   **LI**  |  **RCH**  |  **RCS**  |  **RCSS** |   **WR**  | **Average** |
+|:-----------------:|:---------:|:---------:|:---------:|:---------:|:---------:|:---------:|:-----------:|
+| polyglot-ko-12.8B |      16.0 |     10.81 |      8.57 |     32.43 |     14.29 |      0.00 |       13.68 |
+|  gpt-3.5-wo-token |      16.0 |     32.43 |     42.86 |     18.92 |     35.71 |      0.00 |       24.32 |
+|   gpt-3.5-w-token |      16.0 |     35.14 |     42.86 |     18.92 |     35.71 |      9.09 |       26.29 |
+|    gpt-4-wo-token |      40.0 |     54.05 | **68.57** | **59.46** | **69.05** | 36.36 |   **54.58** |
+|     gpt-4-w-token |      36.0 | **56.76** | **68.57** | **59.46** | **69.05** | 36.36 |       54.37 |
+| Human Performance | **45.41** |     54.38 |      48.7 |     39.93 |     44.54 |      **54.0** |       47.83 |
 
 
 Our analysis shows an intriguing disparity between Language Models (LMs) and human proficiency across various tasks. Notably, while humans excel in writing (WR) questions, they comparatively underperformed in Reading Comprehension: Science (RCS) tasks. GPT-4, the latest AI model in this comparison, exhibits the opposite pattern. Despite struggling with writing, it demonstrated considerable strength in RCS tasks.
 
 The GPT-4 also significantly outperformed GPT-3.5-16k and Polyglot-12.8B. This substantial leap in performance is aligned with expectations, given the much larger size of GPT-4, indicating the potential benefits of scaling up these models.
+
+Moreover, though the addition of unique tokens change the performance of the model we do not observe any significant tendancies in our experiments.
 
 Lastly, the underperformance of Polyglot-Ko-12.8B is noteworthy. Its scores were below random guessing (20%), indicating limitations in the model's capabilities.
 
@@ -109,12 +110,12 @@ For the reproducibility of our research, we also release our instructions along 
 [Download File](https://github.com/guijinSON/hae-rae/blob/main/blog/assets/test_results.csv)
 
 ### Contributors 
-나건주  
-박수빈  
-박은우  
-손규진  
-염제원  
-유수빈  
-조하늘  
-진혜원  
+[Na Keonju](https://www.linkedin.com/in/%EA%B1%B4%EC%A3%BC-%EB%82%98-1b7930218)
+[Park EunWoo](https://www.linkedin.com/in/eunwoo-park-468387224/) 
+Subin Park
+[Guijin Son](https://github.com/guijinSON)
+[Yeom Je Won](https://www.linkedin.com/in/jewon-yeom-902185230/),  
+[Yoo Soobin]( www.linkedin.com/in/yoosoobin123)
+[Cho Haneul](https://www.linkedin.com/in/haneul-cho-a30036166)
+[Jin Hyewon](https://www.linkedin.com/in/hyewon-jin04)
 
