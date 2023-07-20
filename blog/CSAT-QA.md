@@ -79,6 +79,7 @@ Lastly, the underperformance of Polyglot-Ko-12.8B is noteworthy. Its scores were
 <p align="center">
     <img src="https://github.com/guijinSON/hae-rae/blob/main/blog/assets/csat_spyder.png" width="600" height="600" />
 </p>
+
 ### Release Notes
 
 We are happy to release two versions of the dataset: CSAT-QA(FULL) and CSAT-QA(EVAL). CSAT-QA(EVAL) includes the specific 188 questions that were utilized for our evaluation, whereas CSAT-QA(FULL) includes all 936 questions contained in the complete dataset.
